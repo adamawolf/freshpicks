@@ -1,5 +1,5 @@
 //
-//  FPKSRootWareViewController.h
+//  FPKSDishCollectionCell.h
 //  freshpicks_ios
 //
 //  Created by Adam Wolf on 4/6/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FPKSRootWareViewController : UIViewController
+@interface FPKSDishCollectionCell : UICollectionViewCell
 
 @end
