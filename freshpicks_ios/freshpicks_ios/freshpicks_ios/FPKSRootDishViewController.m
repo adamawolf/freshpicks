@@ -50,4 +50,11 @@
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate methods
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"PushDishDetail" sender:nil];
+}
+
 @end

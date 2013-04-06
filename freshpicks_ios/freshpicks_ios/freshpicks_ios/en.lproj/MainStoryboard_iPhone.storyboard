@@ -19,6 +19,32 @@
             </objects>
             <point key="canvasLocation" x="-72" y="64"/>
         </scene>
+        <!--Dish Detail View Controller-->
+        <scene sceneID="HXO-Mr-yg1">
+            <objects>
+                <viewController id="7ZQ-Ua-EZ6" customClass="FPKSDishDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qV1-Qp-P2s">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dish Detail View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG3-QB-7sM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aG3-QB-7sM" firstAttribute="centerX" secondItem="qV1-Qp-P2s" secondAttribute="centerX" type="default" id="3ON-zt-p2u"/>
+                            <constraint firstAttribute="centerY" secondItem="aG3-QB-7sM" secondAttribute="centerY" type="user" id="J2G-es-nBU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Oo-ky-igb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cA3-IV-DiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="64"/>
+        </scene>
         <!--Root Dish View Controller - Wares-->
         <scene sceneID="vrM-qc-Cya">
             <objects>
@@ -75,6 +101,7 @@
                     <navigationItem key="navigationItem" title="Wares" id="f9q-Iw-rGS"/>
                     <connections>
                         <outlet property="collectionView" destination="frb-hC-9A0" id="Uni-nM-bp9"/>
+                        <segue destination="7ZQ-Ua-EZ6" kind="push" identifier="PushDishDetail" id="inw-T1-yfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFm-OR-HOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,32 +109,6 @@
             <point key="canvasLocation" x="413" y="64"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="FPKSDishCollectionCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FPKSDishCollectionCell.h"/>
-        </class>
-        <class className="FPKSRootDishViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FPKSRootDishViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

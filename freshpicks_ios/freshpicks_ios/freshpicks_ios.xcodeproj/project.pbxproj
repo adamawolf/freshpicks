@@ -22,6 +22,7 @@
 		94F8DAA01710C08E003C5593 /* freshpicks_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DA9E1710C08E003C5593 /* freshpicks_ios.xcdatamodeld */; };
 		94F8DAAE1710C30A003C5593 /* FPKSRootDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAAD1710C30A003C5593 /* FPKSRootDishViewController.m */; };
 		94F8DAB31710C8EA003C5593 /* FPKSDishCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAB21710C8EA003C5593 /* FPKSDishCollectionCell.m */; };
+		94F8DAB61710DE2A003C5593 /* FPKSDishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAB51710DE2A003C5593 /* FPKSDishDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		94F8DAAD1710C30A003C5593 /* FPKSRootDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSRootDishViewController.m; sourceTree = "<group>"; };
 		94F8DAB11710C8EA003C5593 /* FPKSDishCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSDishCollectionCell.h; sourceTree = "<group>"; };
 		94F8DAB21710C8EA003C5593 /* FPKSDishCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSDishCollectionCell.m; sourceTree = "<group>"; };
+		94F8DAB41710DE2A003C5593 /* FPKSDishDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSDishDetailViewController.h; sourceTree = "<group>"; };
+		94F8DAB51710DE2A003C5593 /* FPKSDishDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSDishDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 			children = (
 				94F8DAAC1710C30A003C5593 /* FPKSRootDishViewController.h */,
 				94F8DAAD1710C30A003C5593 /* FPKSRootDishViewController.m */,
+				94F8DAB41710DE2A003C5593 /* FPKSDishDetailViewController.h */,
+				94F8DAB51710DE2A003C5593 /* FPKSDishDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				94F8DAA01710C08E003C5593 /* freshpicks_ios.xcdatamodeld in Sources */,
 				94F8DAAE1710C30A003C5593 /* FPKSRootDishViewController.m in Sources */,
 				94F8DAB31710C8EA003C5593 /* FPKSDishCollectionCell.m in Sources */,
+				94F8DAB61710DE2A003C5593 /* FPKSDishDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
