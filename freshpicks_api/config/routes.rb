@@ -1,4 +1,10 @@
 FreshpicksApi::Application.routes.draw do
+  resources :dishes
+
+
+  resources :chefs
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
