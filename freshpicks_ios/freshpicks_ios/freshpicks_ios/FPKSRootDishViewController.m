@@ -8,6 +8,7 @@
 
 #import "FPKSRootDishViewController.h"
 #import "FPKSDishCollectionCell.h"
+#import "FPKSWebRequestController.h"
 
 @interface FPKSRootDishViewController ()
 
@@ -34,6 +35,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[FPKSWebRequestController sharedController] asynchronouslyLoadDishList];
 }
 
 #pragma mark - UICollectionViewDataSource methods
