@@ -1,5 +1,5 @@
 //
-//  FPKSAppDelegate.h
+//  FPKSRootWareViewController.h
 //  freshpicks_ios
 //
 //  Created by Adam Wolf on 4/6/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FPKSAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface FPKSRootWareViewController : UIViewController
 
 @end

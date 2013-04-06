@@ -20,8 +20,7 @@
 		94F8DA9A1710C08E003C5593 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F8DA981710C08E003C5593 /* MainStoryboard_iPhone.storyboard */; };
 		94F8DA9D1710C08E003C5593 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F8DA9B1710C08E003C5593 /* MainStoryboard_iPad.storyboard */; };
 		94F8DAA01710C08E003C5593 /* freshpicks_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DA9E1710C08E003C5593 /* freshpicks_ios.xcdatamodeld */; };
-		94F8DAA31710C08E003C5593 /* FPKSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAA21710C08E003C5593 /* FPKSMasterViewController.m */; };
-		94F8DAA61710C08E003C5593 /* FPKSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAA51710C08E003C5593 /* FPKSDetailViewController.m */; };
+		94F8DAAE1710C30A003C5593 /* FPKSRootWareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAAD1710C30A003C5593 /* FPKSRootWareViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +41,8 @@
 		94F8DA991710C08E003C5593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		94F8DA9C1710C08E003C5593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		94F8DA9F1710C08E003C5593 /* freshpicks_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = freshpicks_ios.xcdatamodel; sourceTree = "<group>"; };
-		94F8DAA11710C08E003C5593 /* FPKSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPKSMasterViewController.h; sourceTree = "<group>"; };
-		94F8DAA21710C08E003C5593 /* FPKSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPKSMasterViewController.m; sourceTree = "<group>"; };
-		94F8DAA41710C08E003C5593 /* FPKSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPKSDetailViewController.h; sourceTree = "<group>"; };
-		94F8DAA51710C08E003C5593 /* FPKSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPKSDetailViewController.m; sourceTree = "<group>"; };
+		94F8DAAC1710C30A003C5593 /* FPKSRootWareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSRootWareViewController.h; sourceTree = "<group>"; };
+		94F8DAAD1710C30A003C5593 /* FPKSRootWareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSRootWareViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +95,8 @@
 				94F8DA901710C08E003C5593 /* FPKSAppDelegate.m */,
 				94F8DA981710C08E003C5593 /* MainStoryboard_iPhone.storyboard */,
 				94F8DA9B1710C08E003C5593 /* MainStoryboard_iPad.storyboard */,
-				94F8DAA11710C08E003C5593 /* FPKSMasterViewController.h */,
-				94F8DAA21710C08E003C5593 /* FPKSMasterViewController.m */,
-				94F8DAA41710C08E003C5593 /* FPKSDetailViewController.h */,
-				94F8DAA51710C08E003C5593 /* FPKSDetailViewController.m */,
 				94F8DA9E1710C08E003C5593 /* freshpicks_ios.xcdatamodeld */,
+				94F8DAAF1710C311003C5593 /* View Controllers */,
 				94F8DA871710C08E003C5593 /* Supporting Files */,
 			);
 			path = freshpicks_ios;
@@ -120,6 +114,15 @@
 				94F8DA961710C08E003C5593 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94F8DAAF1710C311003C5593 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94F8DAAC1710C30A003C5593 /* FPKSRootWareViewController.h */,
+				94F8DAAD1710C30A003C5593 /* FPKSRootWareViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +196,7 @@
 				94F8DA8D1710C08E003C5593 /* main.m in Sources */,
 				94F8DA911710C08E003C5593 /* FPKSAppDelegate.m in Sources */,
 				94F8DAA01710C08E003C5593 /* freshpicks_ios.xcdatamodeld in Sources */,
-				94F8DAA31710C08E003C5593 /* FPKSMasterViewController.m in Sources */,
-				94F8DAA61710C08E003C5593 /* FPKSDetailViewController.m in Sources */,
+				94F8DAAE1710C30A003C5593 /* FPKSRootWareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
