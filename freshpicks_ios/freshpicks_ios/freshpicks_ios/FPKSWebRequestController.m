@@ -24,7 +24,7 @@ static FPKSWebRequestController * _sharedInstance = nil;
 }
 
 #define kDishListURL    @"http://freshpicksapi.herokuapp.com/today.json"
-
+#define kMinResponseTime    0.6f
 - (void) asynchronouslyLoadDishList
 {
     NSURL * dishURL = [NSURL URLWithString:kDishListURL];
@@ -43,9 +43,10 @@ static FPKSWebRequestController * _sharedInstance = nil;
                                                             };
                                                             
                                                             NSTimeInterval responseTime = [[NSDate date] timeIntervalSinceDate:startDate];
-                                                            if (responseTime < 0.6f)
+                                                            if (responseTime < kMinResponseTime)
                                                             {
                                                                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                                                    [NSThread sleepForTimeInterval:kMinResponseTime - responseTime];
                                                                     dispatch_sync(dispatch_get_main_queue(), ^{
                                                                         completion();
                                                                     });
