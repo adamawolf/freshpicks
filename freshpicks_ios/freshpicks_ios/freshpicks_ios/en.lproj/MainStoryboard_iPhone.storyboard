@@ -408,8 +408,8 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Yf7-G1-3Yg" secondAttribute="bottom" constant="66" id="5mX-Cp-PL3"/>
                                             <constraint firstAttribute="centerX" secondItem="Yf7-G1-3Yg" secondAttribute="centerX" type="user" id="8hS-AI-awB"/>
-                                            <constraint firstItem="Yf7-G1-3Yg" firstAttribute="centerY" secondItem="yzk-7E-DY1" secondAttribute="centerY" type="default" id="MrE-0C-9TK"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="activityIndicatorView" destination="Yf7-G1-3Yg" id="tTl-id-2K0"/>
