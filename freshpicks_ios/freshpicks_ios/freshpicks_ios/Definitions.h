@@ -14,4 +14,6 @@ typedef enum  {
 
 @interface Definitions : NSObject
 
++ (UIColor *) listingBackgroundColor;
+
 @end

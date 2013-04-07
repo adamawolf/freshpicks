@@ -49,6 +49,8 @@ typedef enum {
 {
     [super viewDidLoad];
     
+    [[self collectionView] setBackgroundColor:[Definitions listingBackgroundColor]];
+    
     [self setStatus:FPKSRootDishViewControllerStatusLoading];
     [[FPKSWebRequestController sharedController] setDishListDelegate:self];
     [[FPKSWebRequestController sharedController] asynchronouslyLoadDishList];
