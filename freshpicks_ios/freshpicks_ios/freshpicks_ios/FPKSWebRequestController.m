@@ -31,12 +31,30 @@ static FPKSWebRequestController * _sharedInstance = nil;
     
     NSURLRequest * dishRequuest = [NSURLRequest requestWithURL:dishURL];
     
+    NSDate * startDate = [NSDate date];
+    
     AFJSONRequestOperation *operation =
     [AFJSONRequestOperation JSONRequestOperationWithRequest:dishRequuest
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                         if ([JSON isKindOfClass:[NSArray class]])
                                                         {
-                                                            [[self dishListDelegate] webRequestController:self didLoadDishList:(NSArray *)JSON];
+                                                            void (^completion)() = ^{
+                                                                [[self dishListDelegate] webRequestController:self didLoadDishList:(NSArray *)JSON];
+                                                            };
+                                                            
+                                                            NSTimeInterval responseTime = [[NSDate date] timeIntervalSinceDate:startDate];
+                                                            if (responseTime < 0.6f)
+                                                            {
+                                                                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                                                    dispatch_sync(dispatch_get_main_queue(), ^{
+                                                                        completion();
+                                                                    });
+                                                                });
+                                                            }
+                                                            else
+                                                            {
+                                                                completion();
+                                                            }
                                                         }
                                                         else
                                                         {

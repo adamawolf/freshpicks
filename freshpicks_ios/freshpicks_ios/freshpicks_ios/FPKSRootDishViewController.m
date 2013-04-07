@@ -33,6 +33,8 @@ typedef enum {
 @property (nonatomic, strong) NSArray * loadedDishListDictionaries;
 @property (nonatomic, strong) NSArray * collectionData;
 
+@property (nonatomic, strong) UIRefreshControl * refreshControl;
+
 @end
 
 @implementation FPKSRootDishViewController
@@ -54,6 +56,27 @@ typedef enum {
     [[self collectionView] setBackgroundColor:[Definitions listingBackgroundColor]];
     
     [self setStatus:FPKSRootDishViewControllerStatusLoading];
+    [[FPKSWebRequestController sharedController] setDishListDelegate:self];
+    [[FPKSWebRequestController sharedController] asynchronouslyLoadDishList];
+    
+    self.collectionView.alwaysBounceVertical = YES;
+    
+    UIRefreshControl * aRefreshControl = [[UIRefreshControl alloc] init];
+    aRefreshControl.tintColor = [UIColor grayColor];
+    [aRefreshControl addTarget:self action:@selector(refershControlAction) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:aRefreshControl];
+    self.collectionView.alwaysBounceVertical = YES;
+    
+    [self setRefreshControl:aRefreshControl];
+}
+
+- (void) refershControlAction
+{
+    [self setLoadedDishListDictionaries:nil];
+    [self setStatus:FPKSRootDishViewControllerStatusLoading];
+    
+    [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    
     [[FPKSWebRequestController sharedController] setDishListDelegate:self];
     [[FPKSWebRequestController sharedController] asynchronouslyLoadDishList];
 }
@@ -205,6 +228,8 @@ typedef enum {
     [self setStatus:FPKSRootDishViewControllerStatusLoaded];
     
     [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    
+    [[self refreshControl] endRefreshing];
 }
 
 - (void) webRequestController: (FPKSWebRequestController *) webRequestController didEncounterErrorLoadingDishList: (NSError *) error
@@ -217,6 +242,8 @@ typedef enum {
     [self setLoadedDishListDictionaries:nil];
     [self setStatus:FPKSRootDishViewControllerStatusError];
     [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    
+    [[self refreshControl] endRefreshing];
 }
 
 @end
