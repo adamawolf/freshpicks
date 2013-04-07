@@ -87,7 +87,7 @@
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lynna Tsou" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRj-23-GTS">
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lynna Tsou" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="fRj-23-GTS">
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="86" type="user" id="45y-c6-rPG"/>
                                                                         <constraint firstAttribute="height" constant="31" id="no8-2c-BDs"/>
@@ -126,10 +126,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstItem="gOV-rk-Zz9" firstAttribute="bottom" secondItem="Kuj-D3-cTk" secondAttribute="bottom" type="default" id="5LC-te-uM2"/>
                                                                 <constraint firstItem="dSU-D6-n8v" firstAttribute="leading" secondItem="tXp-cC-rXU" secondAttribute="trailing" constant="3" type="user" id="5eE-CW-5j7"/>
                                                                 <constraint firstItem="gOV-rk-Zz9" firstAttribute="bottom" secondItem="dSU-D6-n8v" secondAttribute="bottom" type="default" id="9pF-cT-NhH"/>
-                                                                <constraint firstItem="tXp-cC-rXU" firstAttribute="bottom" secondItem="dSU-D6-n8v" secondAttribute="bottom" type="default" id="9tW-iA-neF"/>
                                                                 <constraint firstItem="twJ-dM-TRx" firstAttribute="leading" secondItem="fRj-23-GTS" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="GDW-Uw-K1N"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gOV-rk-Zz9" secondAttribute="trailing" constant="61" type="user" id="I4i-3n-tRz"/>
                                                                 <constraint firstItem="fRj-23-GTS" firstAttribute="centerY" secondItem="twJ-dM-TRx" secondAttribute="centerY" type="default" id="Jhp-y9-5fE"/>
@@ -142,7 +140,6 @@
                                                                 <constraint firstItem="Kuj-D3-cTk" firstAttribute="leading" secondItem="gOV-rk-Zz9" secondAttribute="trailing" constant="3" type="user" id="XWG-HB-8Av"/>
                                                                 <constraint firstItem="tXp-cC-rXU" firstAttribute="leading" secondItem="twJ-dM-TRx" secondAttribute="trailing" constant="3" type="user" id="dAb-sW-ejR"/>
                                                                 <constraint firstItem="gOV-rk-Zz9" firstAttribute="leading" secondItem="dSU-D6-n8v" secondAttribute="trailing" constant="3" type="user" id="hOG-sy-2c3"/>
-                                                                <constraint firstItem="tXp-cC-rXU" firstAttribute="bottom" secondItem="twJ-dM-TRx" secondAttribute="bottom" type="default" id="hsR-XI-ULv"/>
                                                                 <constraint firstItem="kW8-r0-paE" firstAttribute="leading" secondItem="58g-Lx-WBy" secondAttribute="leading" constant="10" type="user" id="kE2-EJ-GLD"/>
                                                                 <constraint firstItem="fRj-23-GTS" firstAttribute="top" secondItem="58g-Lx-WBy" secondAttribute="top" constant="10" type="user" id="kp8-Fk-JQ4"/>
                                                                 <constraint firstItem="fRj-23-GTS" firstAttribute="leading" secondItem="58g-Lx-WBy" secondAttribute="leading" constant="77" type="user" id="oE7-NL-yRP"/>
@@ -173,6 +170,18 @@
                                             <constraint firstItem="Hq0-Ml-RxR" firstAttribute="centerX" secondItem="8Lo-Z8-1kh" secondAttribute="centerX" type="default" id="SkY-bV-ejS"/>
                                             <constraint firstItem="Hq0-Ml-RxR" firstAttribute="top" secondItem="8Lo-Z8-1kh" secondAttribute="top" constant="10" id="UNB-S8-1HM"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chefImageView" destination="kW8-r0-paE" id="DO0-n3-66R"/>
+                                            <outlet property="chefLabel" destination="fRj-23-GTS" id="vsP-Ay-54L"/>
+                                            <outlet property="dishImageView" destination="E6N-Jw-enV" id="DQt-aQ-bKh"/>
+                                            <outlet property="dishNameAndPriceLabel" destination="o0a-mB-Zob" id="hJi-tE-sQ7"/>
+                                            <outlet property="fifthImageView" destination="Kuj-D3-cTk" id="TUu-uq-Aln"/>
+                                            <outlet property="firstStarImageView" destination="twJ-dM-TRx" id="TUq-eA-pAX"/>
+                                            <outlet property="fourthStarImageView" destination="gOV-rk-Zz9" id="hfu-Qk-GXi"/>
+                                            <outlet property="nameLabelWidthContraint" destination="45y-c6-rPG" id="HKn-hu-qfk"/>
+                                            <outlet property="secondStarImageView" destination="tXp-cC-rXU" id="4SD-5E-nSd"/>
+                                            <outlet property="thirdStarImageView" destination="dSU-D6-n8v" id="AdC-jG-UWW"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FPKSLoadingCollectionCell" id="yzk-7E-DY1" customClass="FPKSLoadingCollectionCell">
                                         <rect key="frame" x="0.0" y="330" width="320" height="320"/>
@@ -278,11 +287,23 @@
     <resources>
         <image name="chef_01.png" width="55" height="55"/>
         <image name="food_01.png" width="300" height="225"/>
-        <image name="rating.png" width="31" height="31"/>
+        <image name="rating.png" width="15" height="15"/>
     </resources>
     <classes>
         <class className="FPKSDishCollectionCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FPKSDishCollectionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chefImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="chefLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dishImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="dishNameAndPriceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fifthImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="firstStarImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fourthStarImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabelWidthContraint" candidateClass="NSLayoutConstraint"/>
+                <relationship kind="outlet" name="secondStarImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="thirdStarImageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="FPKSDishDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FPKSDishDetailViewController.h"/>
