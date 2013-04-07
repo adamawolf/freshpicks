@@ -1,5 +1,5 @@
 //
-//  FPKSDishCollectionCell.h
+//  FPKSErrorCollectionCell.h
 //  freshpicks_ios
 //
 //  Created by Adam Wolf on 4/6/13.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FPKSDishCollectionCell : UICollectionViewCell
+@interface FPKSErrorCollectionCell : UICollectionViewCell
 
-- (void) configureCellWithDishData: (NSDictionary *) dishData;
+- (IBAction) retryButtonTapped: (id)sender;
 
 @end

@@ -8,6 +8,13 @@
 
 #import "FPKSDishCollectionCell.h"
 
+@interface FPKSDishCollectionCell ()
+
+@property (nonatomic, strong) NSDictionary * dishData;
+
+@end
+
+
 @implementation FPKSDishCollectionCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,13 +26,16 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void) configureCellWithDishData: (NSDictionary *) dishData
 {
-    // Drawing code
+    [self setDishData:dishData];
 }
-*/
+
+- (void) setDishData:(NSDictionary *)dishData
+{
+    _dishData = dishData;
+    
+    DLog(@"TODO: render data in collection cell");
+}
 
 @end

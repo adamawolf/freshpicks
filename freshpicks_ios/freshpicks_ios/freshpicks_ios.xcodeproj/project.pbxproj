@@ -36,6 +36,8 @@
 		94F8DAE41710FCDB003C5593 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAE31710FCDB003C5593 /* Definitions.m */; };
 		94F8DAE61710FDC7003C5593 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F8DAE51710FDC7003C5593 /* SystemConfiguration.framework */; };
 		94F8DAE81710FE19003C5593 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F8DAE71710FE19003C5593 /* MobileCoreServices.framework */; };
+		94F8DAEB17110B01003C5593 /* FPKSLoadingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAEA17110B01003C5593 /* FPKSLoadingCollectionCell.m */; };
+		94F8DAEE17110B1F003C5593 /* FPKSErrorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAED17110B1F003C5593 /* FPKSErrorCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,10 @@
 		94F8DAE31710FCDB003C5593 /* Definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definitions.m; sourceTree = "<group>"; };
 		94F8DAE51710FDC7003C5593 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		94F8DAE71710FE19003C5593 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		94F8DAE917110B01003C5593 /* FPKSLoadingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSLoadingCollectionCell.h; sourceTree = "<group>"; };
+		94F8DAEA17110B01003C5593 /* FPKSLoadingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSLoadingCollectionCell.m; sourceTree = "<group>"; };
+		94F8DAEC17110B1F003C5593 /* FPKSErrorCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSErrorCollectionCell.h; sourceTree = "<group>"; };
+		94F8DAED17110B1F003C5593 /* FPKSErrorCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSErrorCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +189,12 @@
 		94F8DAB01710C89A003C5593 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				94F8DAE917110B01003C5593 /* FPKSLoadingCollectionCell.h */,
+				94F8DAEA17110B01003C5593 /* FPKSLoadingCollectionCell.m */,
 				94F8DAB11710C8EA003C5593 /* FPKSDishCollectionCell.h */,
 				94F8DAB21710C8EA003C5593 /* FPKSDishCollectionCell.m */,
+				94F8DAEC17110B1F003C5593 /* FPKSErrorCollectionCell.h */,
+				94F8DAED17110B1F003C5593 /* FPKSErrorCollectionCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -310,6 +320,8 @@
 				94F8DADD1710E73A003C5593 /* UIImageView+AFNetworking.m in Sources */,
 				94F8DAE11710E78C003C5593 /* FPKSWebRequestController.m in Sources */,
 				94F8DAE41710FCDB003C5593 /* Definitions.m in Sources */,
+				94F8DAEB17110B01003C5593 /* FPKSLoadingCollectionCell.m in Sources */,
+				94F8DAEE17110B1F003C5593 /* FPKSErrorCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
