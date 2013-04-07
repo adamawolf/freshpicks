@@ -84,6 +84,7 @@
     [[self ingredientsLabel] setText:[self dishData][@"dish"][@"ingredients"]];
     int remaining = [[self dishData][@"remaining_amount"] isKindOfClass:[NSNull class]] ? 0 : [[self dishData][@"remaining_amount"] intValue];
     [[self remainingLabel] setText:[NSString stringWithFormat:@"%d serving%@ left", remaining, remaining == 1? @"" : @"s"]];
+    [[self restrictionsLabel] setText:[self dishData][@"dish"][@"diet_flags"]];
 }
 
 @end

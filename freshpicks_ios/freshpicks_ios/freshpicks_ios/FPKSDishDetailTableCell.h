@@ -27,6 +27,7 @@
 @property (nonatomic, strong) IBOutlet UILabel * descriptionLabel;
 @property (nonatomic, strong) IBOutlet UILabel * ingredientsLabel;
 @property (nonatomic, strong) IBOutlet UILabel * remainingLabel;
+@property (nonatomic, strong) IBOutlet UILabel * restrictionsLabel;
 
 - (void) configureCellWithDishData: (NSDictionary *) dishData;
 
