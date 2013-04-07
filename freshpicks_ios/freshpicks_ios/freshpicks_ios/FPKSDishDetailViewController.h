@@ -10,4 +10,8 @@
 
 @interface FPKSDishDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary * dishData;
+
+@property (nonatomic, strong) IBOutlet UITableView * tableView;
+
 @end

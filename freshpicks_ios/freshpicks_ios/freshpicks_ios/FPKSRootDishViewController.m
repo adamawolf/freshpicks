@@ -13,6 +13,8 @@
 #import "FPKSLoadingCollectionCell.h"
 #import "FPKSErrorCollectionCell.h"
 
+#import "FPKSDishDetailViewController.h"
+
 typedef enum {
     FPKSRootDishViewControllerStatusLoading,
     FPKSRootDishViewControllerStatusLoaded,
@@ -65,6 +67,15 @@ typedef enum {
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"PushDishDetail"])
+    {
+        FPKSDishDetailViewController * target = (FPKSDishDetailViewController *)[segue destinationViewController];
+        [target setDishData:sender];
+    }
 }
 
 #pragma mark - Custom setter methods
@@ -158,7 +169,12 @@ typedef enum {
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"PushDishDetail" sender:nil];
+    NSDictionary * cellDictionary = [[self collectionData] objectAtIndex:indexPath.row];
+    
+    if ([cellDictionary[@"type"] intValue] == FPKSCollectionCellTypeDish)
+    {
+        [self performSegueWithIdentifier:@"PushDishDetail" sender:cellDictionary[@"dishData"]];
+    }
 }
 
 #pragma mark - FPKSWebRequestControllerDelegate methods

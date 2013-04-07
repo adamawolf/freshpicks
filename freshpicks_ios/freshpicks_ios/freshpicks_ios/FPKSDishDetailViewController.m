@@ -7,6 +7,7 @@
 //
 
 #import "FPKSDishDetailViewController.h"
+#import "FPKSDishDetailTableCell.h"
 
 @interface FPKSDishDetailViewController ()
 
@@ -33,6 +34,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) setDishData:(NSDictionary *)dishData
+{
+    _dishData = dishData;
+    
+    NSString * dishName = [self dishData][@"dish"][@"name"];
+    [self setTitle:dishName ? dishName : @"Dish"];
+}
+
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [[self tableView] dequeueReusableCellWithIdentifier:@"FPKSDishDetailTableCell"];
+    
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void) configureCell: (UITableViewCell *) cell atIndexPath: (NSIndexPath *) indexPath
+{
+    [(FPKSDishDetailTableCell*)cell configureCellWithDishData:[self dishData]];
 }
 
 @end
