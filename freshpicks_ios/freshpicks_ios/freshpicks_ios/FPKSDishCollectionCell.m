@@ -64,9 +64,7 @@
     
     [[self chefLabel] setText:[self dishData][@"dish"][@"chef"][@"name"]];
     
-    DLog(@"frame: %@", NSStringFromCGRect([[self chefLabel] frame]));
     CGSize size = [[self chefLabel] sizeThatFits:CGSizeMake(kMaxChefNameLabelWidth, 31.0f)];
-    DLog(@"target: %@", NSStringFromCGSize(size));
     
     if ([self nameLabelWidthContraint])
     {
