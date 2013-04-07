@@ -10,7 +10,7 @@
 #import "FPKSDishCollectionCell.h"
 #import "FPKSWebRequestController.h"
 
-@interface FPKSRootDishViewController ()
+@interface FPKSRootDishViewController () <FPKSWebRequestControllerDelegate>
 
 @end
 
@@ -28,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [[FPKSWebRequestController sharedController] setDishListDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +64,21 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"PushDishDetail" sender:nil];
+}
+
+#pragma mark - FPKSWebRequestControllerDelegate methods
+
+- (void) webRequestController: (FPKSWebRequestController *) webRequestController didLoadDishList: (NSArray *) dishDictionaries
+{
+    DLog(@"%@", dishDictionaries);
+}
+
+- (void) webRequestController: (FPKSWebRequestController *) webRequestController didEncounterErrorLoadingDishList: (NSError *) error
+{
+    UIAlertView * anAlertView = [[UIAlertView alloc] initWithTitle:@"Error loading dish list" message:[NSString stringWithFormat:@"Error code %d", [error code]] delegate:nil cancelButtonTitle:@"Drats" otherButtonTitles: nil];
+    [anAlertView show];
+    
+    DLog(@"error: %@", [error localizedDescription]);
 }
 
 @end

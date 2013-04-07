@@ -33,6 +33,9 @@
 		94F8DADC1710E73A003C5593 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAD21710E73A003C5593 /* AFXMLRequestOperation.m */; };
 		94F8DADD1710E73A003C5593 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAD41710E73A003C5593 /* UIImageView+AFNetworking.m */; };
 		94F8DAE11710E78C003C5593 /* FPKSWebRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAE01710E78C003C5593 /* FPKSWebRequestController.m */; };
+		94F8DAE41710FCDB003C5593 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8DAE31710FCDB003C5593 /* Definitions.m */; };
+		94F8DAE61710FDC7003C5593 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F8DAE51710FDC7003C5593 /* SystemConfiguration.framework */; };
+		94F8DAE81710FE19003C5593 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F8DAE71710FE19003C5593 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,10 @@
 		94F8DAD41710E73A003C5593 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		94F8DADF1710E78C003C5593 /* FPKSWebRequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPKSWebRequestController.h; sourceTree = "<group>"; };
 		94F8DAE01710E78C003C5593 /* FPKSWebRequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPKSWebRequestController.m; sourceTree = "<group>"; };
+		94F8DAE21710FCDB003C5593 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		94F8DAE31710FCDB003C5593 /* Definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definitions.m; sourceTree = "<group>"; };
+		94F8DAE51710FDC7003C5593 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		94F8DAE71710FE19003C5593 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F8DAE81710FE19003C5593 /* MobileCoreServices.framework in Frameworks */,
+				94F8DAE61710FDC7003C5593 /* SystemConfiguration.framework in Frameworks */,
 				94F8DA7F1710C08E003C5593 /* UIKit.framework in Frameworks */,
 				94F8DA811710C08E003C5593 /* Foundation.framework in Frameworks */,
 				94F8DA831710C08E003C5593 /* CoreGraphics.framework in Frameworks */,
@@ -117,7 +126,9 @@
 		94F8DA7D1710C08E003C5593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94F8DAE71710FE19003C5593 /* MobileCoreServices.framework */,
 				94F8DAC11710E73A003C5593 /* AFNetworking */,
+				94F8DAE51710FDC7003C5593 /* SystemConfiguration.framework */,
 				94F8DA7E1710C08E003C5593 /* UIKit.framework */,
 				94F8DA801710C08E003C5593 /* Foundation.framework */,
 				94F8DA821710C08E003C5593 /* CoreGraphics.framework */,
@@ -131,6 +142,8 @@
 			children = (
 				94F8DA8F1710C08E003C5593 /* FPKSAppDelegate.h */,
 				94F8DA901710C08E003C5593 /* FPKSAppDelegate.m */,
+				94F8DAE21710FCDB003C5593 /* Definitions.h */,
+				94F8DAE31710FCDB003C5593 /* Definitions.m */,
 				94F8DA981710C08E003C5593 /* MainStoryboard_iPhone.storyboard */,
 				94F8DA9B1710C08E003C5593 /* MainStoryboard_iPad.storyboard */,
 				94F8DA9E1710C08E003C5593 /* freshpicks_ios.xcdatamodeld */,
@@ -296,6 +309,7 @@
 				94F8DADC1710E73A003C5593 /* AFXMLRequestOperation.m in Sources */,
 				94F8DADD1710E73A003C5593 /* UIImageView+AFNetworking.m in Sources */,
 				94F8DAE11710E78C003C5593 /* FPKSWebRequestController.m in Sources */,
+				94F8DAE41710FCDB003C5593 /* Definitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "freshpicks_ios/freshpicks_ios-Prefix.pch";
 				INFOPLIST_FILE = "freshpicks_ios/freshpicks_ios-Info.plist";
+				OTHER_CFLAGS = "-DDLOG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

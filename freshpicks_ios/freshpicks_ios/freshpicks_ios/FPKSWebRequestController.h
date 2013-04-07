@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class FPKSWebRequestController;
+
+@protocol FPKSWebRequestControllerDelegate <NSObject>
+
+- (void) webRequestController: (FPKSWebRequestController *) webRequestController didLoadDishList: (NSArray *) dishDictionaries;
+- (void) webRequestController: (FPKSWebRequestController *) webRequestController didEncounterErrorLoadingDishList: (NSError *) error;
+
+@end
+
 @interface FPKSWebRequestController : NSObject
+
+@property (nonatomic, weak) id<FPKSWebRequestControllerDelegate> dishListDelegate;
 
 - (void) asynchronouslyLoadDishList;
 

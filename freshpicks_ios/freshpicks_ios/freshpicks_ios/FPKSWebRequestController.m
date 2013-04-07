@@ -34,14 +34,18 @@ static FPKSWebRequestController * _sharedInstance = nil;
     AFJSONRequestOperation *operation =
     [AFJSONRequestOperation JSONRequestOperationWithRequest:dishRequuest
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                        NSLog(@"%@", (NSString *)JSON);
+                                                        if ([JSON isKindOfClass:[NSArray class]])
+                                                        {
+                                                            [[self dishListDelegate] webRequestController:self didLoadDishList:(NSArray *)JSON];
+                                                        }
+                                                        else
+                                                        {
+                                                            NSError * error = [[NSError alloc] initWithDomain:@"FPSKWebRequestControllerError" code:FSPKErrorCodeUnexpectedResponse userInfo:nil];
+                                                            [[self dishListDelegate] webRequestController:self didEncounterErrorLoadingDishList:error];                                                            
+                                                        }
                                                     }
                                                     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                                     message:[NSString stringWithFormat:@"%@",error]
-                                                                                                    delegate:nil
-                                                                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                                                        [alertView show];
+                                                        [[self dishListDelegate] webRequestController:self didEncounterErrorLoadingDishList:error];
                                                     }];
     
     [operation start];
