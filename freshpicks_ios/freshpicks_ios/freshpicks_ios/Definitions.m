@@ -16,7 +16,7 @@
     
     if (!_listingBackroundColor)
     {
-        _listingBackroundColor = [UIColor colorWithRed:(226.0f/255.0f) green:(249.0f/255.0f) blue:(255.0f/255.0f) alpha:1.0f];
+        _listingBackroundColor = [UIColor colorWithRed:(229.0f/255.0f) green:(236.0f/255.0f) blue:(202.0f/255.0f) alpha:1.0f];
     }
     
     return _listingBackroundColor;
